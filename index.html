@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Living Around</title>
 
     
     <!-- Link Bootstrap -->
@@ -23,31 +23,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
 
 </head>
-<body>
 
-    <!--ScrollSpy: permite o scroll automático na landing page ao clicar nas secções da NavBar -->
+    <!--ScrollSpy NAVBAR-->
     <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0">
 
-        
-   <!--Cabeçalho: Imagem e NavBar-->
 
-   <!-- Título principal -->
+
+
+
+   <!-- CABEÇALHO - título e imagem de fundo -->
  
    <header id="cabecalho">
-    <h1 class="Título">Living Around</h1>
+    <h1 class="titulo_cabecalho">Living Around</h1>
   </header>
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
     <div class="container-fluid">
       <a class="navbar-brand ms-auto" href="#"></a>
-  
-      <!-- Botão para abrir o menu em ecrãs pequenos - REVER COMENTARIO -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <!-- Itens da Navbar - REVER COMENTARIO -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
             <li class="nav-item acomodacao">
@@ -66,24 +59,66 @@
       </div>
     </div>
   </nav>
-  
-  
 
-    <!-- Conteúdo principal -->
+    <!-- mobile first - botão navbar em ecrãs pequenos -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+  
   <main>
 
-<!--COMEÇAR POR AQUI - DIV CLASS "ROW" + DIV CLASS "COL"-->
-  <section id="sectionHero">
-    <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            Viva livre, trabalhe de qualquer lugar, descubra o mundo.
+
+  <!--SECÇÃO HERO-->
+
+    <section id="section_Hero">
+      <div class="container text-center">
+        <div class="row align-items-center">
+    
+          <!-- Lado esquerdo da secção  -->
+          <div class="esquerda_Hero">
+            Viva <span class="destaque">livre</span>,<br>
+            trabalhe de qualquer lugar,<br>
+            descubra o <span class="destaque">mundo</span>.
           </div>
-          <div class="col">
-            2 of 2
+    
+          <!-- Linha vertical que divide a secção ao meio -->
+            <div class="linhaVertical_Hero"></div>
+        
+          
+          <!-- Lado direito da secção (vai-se dividir em duas colunas) -->
+            <div class="direita_Hero">
+                <h5 class="trabalhosRemotos_Hero">Trabalhos Remotos</h5>
+                <div class="row">
+          
+                  <!-- Primeira coluna -->
+                   <div class="lista1">
+                    <ul class="list-unstyled">
+                      <li>Indeed</li>
+                      <li>LinkedIn</li>
+                      <li>JobRemote</li>
+                      <li>GoogleJobs</li>
+                    </ul>
+                  </div>
+                  
+                  <!-- Segunda coluna da lista -->
+                   <div class="lista2">
+                    <ul class="list-unstyled">
+                      <li>Indeed</li>
+                      <li>LinkedIn</li>
+                      <li>JobRemote</li>
+                      <li>GoogleJobs</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+
           </div>
         </div>
-  </section>
+    </section>
+
+  
 
   <section id="sectionAcomodacao">
     <h2>Section Acomodação</h2>
