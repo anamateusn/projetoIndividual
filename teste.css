@@ -1,6 +1,13 @@
+/*GERAL*/
 body, html { /*remover o espaçamento padrão - garantia que o layout começa do zero - margin & padding: 0*/
     margin: 0;
     padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 
   /* NAVBAR */
@@ -84,9 +91,121 @@ body, html { /*remover o espaçamento padrão - garantia que o layout começa do
     letter-spacing: 0%;                /* Espaço horizontal entre cada letra */
   }
 
+
+  /*SECÇÃO HERO*/
+
+  .sectionHero {
+    width: 100%;
+    height: 569px;
+    position: relative;
+    background-color: rgba(180, 155, 44, 0.25); 
+
+    display: flex;                  /* Alinha os elementos lado a lado (coluna esquerda e direita) */
+    justify-content: space-between;/* Cria espaço igual entre as colunas esquerda e direita */
+    align-items: center;            /* Alinha o topo das colunas */
+    padding: 60px 87px;            /* Espaço interior: topo/baixo 60px, laterais 87px */
+    flex-wrap: wrap;               /* Permite que as colunas passem para baixo em ecrãs pequenos */
+    gap: 40px;                     /* Espaço entre colunas em layouts menores */
+    box-sizing: border-box;
+}
+  
+
+/* Coluna Esquerda - Texto de destaque */
+.EsquerdaHero {
+  width: 575px;                  /* Largura exata conforme design */
+  height: 152px;                 /* Altura exata conforme design */
+}
+
+.EsquerdaHero p {
+  font-family: 'Jura', sans-serif; /* Fonte elegante */
+  font-weight: 400;             /* Espessura normal da fonte */
+  font-size: 43px;              /* Tamanho grande do texto */
+  line-height: 118%;            /* Espaçamento entre linhas */
+  letter-spacing: 0.2em;        /* Espaço entre letras (20%) */
+  color: #000;                  /* Cor preta */
+  margin: 0;                    /* Remove margem padrão */
+}
+
+/* Coluna Direita */
+.DireitaHero {
+  width: 575px;                 /* Mesma largura que a coluna esquerda, ajustável */
+}
+
+/* Título da secção */
+.section-title {
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;             /* Negrito */
+  font-size: 30px;
+  line-height: 118%;
+  color: #000;
+  margin-bottom: 20px;          /* Espaço abaixo do título */ 
+  text-align: center;
+}
+
+/* Área das listas com cantos decorativos */
+.decorated-lists {
+  position: relative;           /* Para posicionar os cantos absolutos dentro deste bloco */
+  padding: 40px;
+}
+
+/* Cantos decorativos */
+.corner {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border: 10px solid #000;
+}
+
+/* Cantos específicos */
+.top-left {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* Container das duas listas lado a lado */
+.lists-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Estilo das listas */
+.lists-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Jura', sans-serif;
+  font-size: 18px;
+  color: #000;
+  width: 132px;                 /* Conforme o layout */
+  height: auto;                 /* Altura automática */
+  font-weight: 700;
+}
+
+/* linha vertical que divide a secção Hero ao meio */
+.vertical-divider {
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 50%;
+  width: 1px;
+  background-color: black;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
 /* MOBILE */
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .titulo-centralizado h1 {
       font-size: 2.5rem;             /* MOBILE Reduz o tamanho da fonte em ecrãs com largura até 768px */
     }
@@ -102,6 +221,60 @@ body, html { /*remover o espaçamento padrão - garantia que o layout começa do
         margin-right: 10px;
       }
 
+      .sectionHero {
+        height: auto; /* Deixa a altura adaptar-se ao conteúdo */
+        margin-top: 0; /* Ajusta o espaçamento se necessário */
+        padding: 1rem; /* Adiciona algum espaço interno para melhor leitura */
+
+        flex-direction: column;              /* Empilha os elementos verticalmente */
+        height: auto;                        /* Permite que a altura cresça conforme o conteúdo */
+        padding: 40px 20px;                  /* Reduz padding lateral em ecrãs pequenos */
+        gap: 30px;                           /* Espaço entre colunas empilhadas */
+        align-items: center;
+      }
+
+      .EsquerdaHero, 
+      .DireitaHero {
+        width: 100%;           /* Largura 100% para ocupar toda a largura disponível */
+        max-width: 100%;       /* Impede que ultrapasse a largura */
+        box-sizing: border-box;/* Garante que padding não aumente a largura */
   }
+
+      .EsquerdaHero p {
+        font-size: 28px;                     /* Tamanho da fonte mais adequado para mobile */
+        line-height: 130%;                  
+        letter-spacing: 10%;                
+        width: 100%;                         /* Ocupa toda a largura disponível */
+        max-width: 100%;
+        text-align: center;                 /* Centraliza o texto */
+        word-wrap: break-word;
+      }
+    
+      .DireitaHero {
+        text-align: center;                 /* Centraliza título e listas */
+      }
+    
+      .section-title {
+        font-size: 24px;
+      }
+    
+      .lists-container {
+        flex-direction: column;             /* Listas ficam uma por cima da outra */
+        align-items: center;                /* Centraliza listas */
+        gap: 20px;
+      }
+    
+      .lists-container ul {
+        margin: 0 auto;                     /* Centraliza as listas */
+      }
+    
+      .corner {
+        display: none;                      /* Oculta cantos decorativos no mobile (opcional) */
+      }
+    }
+
+    
+      
+    
 
 
