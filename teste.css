@@ -1,16 +1,19 @@
-/*GERAL*/
-body, html { /*remover o espaçamento padrão - garantia que o layout começa do zero - margin & padding: 0*/
+
+/* !!! GERAL !!! */
+
+body, html { /*remove o espaçamento padrão - garantia que o layout começa do zero - margin & padding: 0*/
     margin: 0;
     padding: 0;
     max-width: 100%;
     overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   * {
     box-sizing: border-box;
   }
 
-  /* NAVBAR */
+  /* !!! NAVBAR !!! */
   
   .navbar {
     padding-top: 20px;              
@@ -50,10 +53,8 @@ body, html { /*remover o espaçamento padrão - garantia que o layout começa do
   }
 
 
-
-
   
-/*SECÇÃO LIVING AROUND*/
+/* !!! SECÇÃO LIVING AROUND !!! */
 
 
 .sectionLiving {
@@ -92,7 +93,8 @@ body, html { /*remover o espaçamento padrão - garantia que o layout começa do
   }
 
 
-  /*SECÇÃO HERO*/
+  /* !!! SECÇÃO HERO !!! */
+
 
   .sectionHero {
     width: 100%;
@@ -131,7 +133,7 @@ body, html { /*remover o espaçamento padrão - garantia que o layout começa do
   width: 575px;                 /* Mesma largura que a coluna esquerda, ajustável */
 }
 
-/* Título da secção */
+/* Título Trabalhos Remotos */
 .section-title {
   font-family: 'Jura', sans-serif;
   font-weight: 700;             /* Negrito */
@@ -203,7 +205,217 @@ body, html { /*remover o espaçamento padrão - garantia que o layout começa do
   z-index: 1;
 }
 
-/* MOBILE */
+/* !!! SECÇÃO ACOMODAÇÃO !!! */
+
+.sectionAcomodacao {
+  width: 100%;
+  height: 515px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Coluna Esquerda c/ imagem */
+
+.EsquerdaAcomodacao {
+  width: 607px;
+  height: 515px;
+  background-image: url('images/pexels-gya-den-768256-2303781-2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Coluna direita c/ texto & botão descobrir*/
+
+.DireitaAcomodacao {
+  flex: 1; /* ocupa o restante espaço da secção */
+  height: 515px;
+  background-color: black;
+  color: white;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 186px 60px 60px 60px; /* top, right, bottom, left */
+  position: relative;
+}
+
+.texto-descobrir {
+  width: 360px;
+  height: 72px;
+  font-family: "Jura", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 118%;
+  text-align: center;
+  color: white;
+  letter-spacing: 0%;
+}
+
+.btn-descobrir {
+  display: flex;
+  width: 309px;
+  height: 77px;
+  top: 297px;
+  left: 270px;
+  border: 3px solid white;
+  border-radius: 30px;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  font-family: 'Jura', sans-serif; /* ou outra da tua preferência */
+  font-size: 25px;
+  letter-spacing: 1px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* !!! SECÇÃO LOCAIS !!! */
+
+.sectionLocais {
+  display: flex;
+  height: 541px; 
+  width: 100%;
+}
+
+/* Coluna Esquerda c/ texto & botão explorar */
+.EsquerdaLocais {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: rgba(180, 155, 44, 0.25); 
+  text-align: center;
+  position: relative;
+}
+
+.texto-destinos {
+  width: 360px;
+  height: 72px;
+  font-family: 'Jura', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 118%;
+  letter-spacing: 0%;
+}
+
+.btn-explorar {
+  display: flex;
+  width: 309px;
+  height: 77px;
+  top: 303px;
+  left: 205px;
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  border: 3px solid black;
+  border-radius: 35px;
+  font-family: 'Jura', sans-serif;
+  font-size: 25px;
+  letter-spacing: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.top-link {
+  margin-top: 20px;
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Coluna Direita c/ Imagem */
+.DireitaLocais {
+  flex: 1;
+  background-image: url('images/pexels-thatguycraig000-1546898-2.png'); /* coloca aqui o caminho da tua imagem */
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+}
+
+/* Icon Voltar ao Topo*/
+.sectionLocais .top-link {
+  right: auto;    /* Cancela o right padrão */
+  left: 20px;     /* Define margem a partir da esquerda */
+  bottom: 20px;   /* Mantém 20px do fundo */
+  background-color: transparent !important;
+  border: 2px solid black !important;
+  color: black !important;
+}
+
+
+/* Dentro de cada secção - VERIFICAR NO FINAL TODAS AS SECÇÕES COM ESTA SETA SE TÊM position: relative */
+.top-link {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  text-align: center;
+  line-height: 36px;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+/* SECÇÃO BLOG */
+
+.sectionBlog {
+  width: 100%;
+  height: 690.5130615234375px;
+  top: 2441.49px;
+  background-image: url('images/pexels-thepaintedsquare-583848.png'); /* coloca aqui o caminho da tua imagem */
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.btn-blog {
+  display: flex;
+  width: 309px;
+  height: 77px;
+  top: 2748px;
+  left: 565px;
+  background-color: #1E1E1E;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 35px;
+  font-family: 'Jura', sans-serif;
+  font-size: 25px;
+  letter-spacing: 0px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* !!! RESPONSIVIDADE MOBILE !!! */
+
+
+
+/*MOBILE - SECÇÃO LIVING + NAVBAR*/
+
+
 
 @media (max-width: 768px) {
     .titulo-centralizado h1 {
@@ -220,6 +432,10 @@ body, html { /*remover o espaçamento padrão - garantia que o layout começa do
       .espacamento-contatos {       /* MOBILE Adapta o espaçamento dos links na Navbar */
         margin-right: 10px;
       }
+
+
+/*MOBILE - SECÇÃO HERO*/
+
 
       .sectionHero {
         height: auto; /* Deixa a altura adaptar-se ao conteúdo */
@@ -271,10 +487,98 @@ body, html { /*remover o espaçamento padrão - garantia que o layout começa do
       .corner {
         display: none;                      /* Oculta cantos decorativos no mobile (opcional) */
       }
+
+
+/* MOBILE - SECCÇÃO ACOMODAÇÃO */
+
+    
+      .sectionAcomodacao {
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+    
+        /* Coluna esq - IMAGEM - A imagem fica apenas responsiva em alguns tamanhos mobile mas não todos*/
+      .EsquerdaAcomodacao {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
+      }
+    
+        /*Coluna drt - TEXTO + BOTÃO */
+      .DireitaAcomodacao {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        justify-content: center;
+      }
+    
+      .texto-descobrir {
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+      }
+    
+      .btn-descobrir {
+        margin-top: 20px;
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+
+
+
+/* MOBILE - SECÇÃO LOCAIS*/
+
+
+      .sectionLocais {
+        flex-direction: column;
+        height: auto;         /* altura se ajusta ao conteúdo */
+        margin: 0;
+        padding: 0;
+      }
+    
+      /* Coluna esquerda - TEXTO + BOTÃO */
+      .EsquerdaLocais {
+        width: 100%;
+        padding: 20px 16px;   /* reduz o padding lateral */
+      }
+    
+      .texto-destinos {
+        font-size: 24px;      /* texto um pouco menor para mobile */
+        margin-bottom: 16px;  /* espaçamento embaixo do título */
+      }
+    
+      .btn-explorar {
+        padding: 8px 20px;
+        font-size: 18px;
+      }
+    
+        /* Coluna direita - IMAGEM */
+        .DireitaLocais {
+          width: 100%;
+          height: 200px;        /* define uma altura razoável para mobile */
+          padding: 0;
+          background-size: cover;
+          background-position: center;
+          margin-top: 16px;     /* espaço entre texto e imagem */
+        }
+
+      /* Botão voltar ao topo */
+      .sectionLocais .top-link {
+        bottom: 16px;         /* mais próximo do fundo */
+        left: 16px;           /* mantém no canto inferior esquerdo */
+        width: 48px;
+        height: 48px;
+        font-size: 32px;
+        line-height: 32px;
+        margin-top: 0; 
+      }
+
     }
-
-    
-      
-    
-
-
