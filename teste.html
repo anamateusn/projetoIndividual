@@ -24,11 +24,12 @@
 
 </head>
 
-<div id="inicio"></div>
+
 
 <!--INÍCIO DO BODY C/ SCROLLSPY NA NAVBAR -->
 <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0"> 
-
+  <div id="inicio"></div>
+  
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent"> 
     <div class="container-fluid">
@@ -66,10 +67,13 @@
     </div>
 </section>
 
+
+<!--Adicionei ID a cada secção relacionado com o ScrollSpy e classes para estilizar no CSS -->
+
 <!--SECÇÃO HERO -->
 
 
-<section class="sectionHero">
+<section id="sectionHero" class="sectionHero">
 
     <div class="EsquerdaHero">
     <p>      Viva <b><span style="color: #686931">livre</span></b>, trabalhe de qualquer lugar, descubra o <b><span style="color: #686931">mundo</span></b>. </p>
@@ -104,29 +108,37 @@
 
 <!--SECÇÃO ACOMODAÇÃO -->
 
-<section class="sectionAcomodacao">
+<section id="sectionAcomodacao" class="sectionAcomodacao">
     <div class="EsquerdaAcomodacao"></div>
     <div class="DireitaAcomodacao">
       <h2 class="texto-descobrir">Descubra o seu novo escritório.</h2>
       &nbsp;
       <a href="#sectionDestino" class="btn-descobrir">Descobrir</a> <!--botão descobrir-->
-      <a href="#inicio" class="top-link" aria-label="Voltar ao topo">
-        ↑
-      </a>
+      <div class="topo-acomodacao">
+        <button class="btn-voltar-topo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16"> 
+          <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+        </svg>
+      </div>
+
     </div>
 </section>
 
 
 <!--SECÇÃO LOCAIS-->
 
-<section class="sectionLocais">
+<section id="sectionLocais" class="sectionLocais">
     <div class="EsquerdaLocais">
       <h2 class="texto-destinos">Temos destinos<p></p>especiais para você.</h2>
-      &nbsp;
-      <a href="#sectionExplorar" class="btn-explorar">Explorar</a>
-      <a href="#inicio" class="top-link" aria-label="Voltar ao topo">
-        ↑
-    </a>
+      &nbsp;    
+    <!--Icon-->
+    <div class="topo-locais">
+      <button class="btn-voltar-topo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></button>
+      <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16"> 
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+      </svg>
+    </div>
+
     </div>
     <div class="DireitaLocais"></div>
   </section>
@@ -135,11 +147,15 @@
 
 
 <!--SECÇÃO BLOG-->
-<section class="sectionBlog">
+<section id="sectionBlog" class="sectionBlog">
     <a href="#sectionExplorar" class="btn-blog">BLOG</a>
-    <a href="#inicio" class="top-link" aria-label="Voltar ao topo">
-      ↑
-  </a>
+    <div class="topo-blog">
+      <button class="btn-voltar-topo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"></button>
+      <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16"> 
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+      </svg>
+    </div>
+
 </section>
 
 <!--SECÇÃO CONTATOS-->

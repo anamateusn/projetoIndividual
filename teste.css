@@ -13,7 +13,10 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
     box-sizing: border-box;
   }
 
-  /* !!! NAVBAR !!! */
+
+
+
+/* !!! NAVBAR !!! */
   
   .navbar {
     padding-top: 20px;              
@@ -53,6 +56,7 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   }
 
 
+
   
 /* !!! SECÇÃO LIVING AROUND !!! */
 
@@ -66,15 +70,6 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
                                          /* Define a imagem de fundo, sem repetição, e centrada */
     background-size: cover;              /* Faz com que a imagem cubra toda a secção, adaptando-se ao tamanho */
     position: relative;                  /* Define a posição como "relativa" para permitir usar o ::before corretamente */
-  }
-  
-  .sectionLiving::before {
-    content: '';                         /* Cria um pseudo-elemento (sem conteúdo visível) */
-    position: absolute;                  /* Permite que o pseudo-elemento fique posicionado dentro da secção */
-    width: 100%;                         /* O pseudo-elemento cobre toda a largura da secção */
-    height: 100%;                        /* E também toda a altura */
-    background: rgba(0, 0, 0, 0.3);      /* Um fundo preto semi-transparente por cima da imagem para dar contraste ao texto */
-    z-index: 1;                          /* Fica atrás do texto (que tem z-index maior) mas acima da imagem de fundo */
   }
   
   .titulo_living {
@@ -91,6 +86,7 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
     line-height: 100%;                  /* Espaçamento entre linhas */
     letter-spacing: 0%;                /* Espaço horizontal entre cada letra */
   }
+
 
 
   /* !!! SECÇÃO HERO !!! */
@@ -205,6 +201,9 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   z-index: 1;
 }
 
+
+
+
 /* !!! SECÇÃO ACOMODAÇÃO !!! */
 
 .sectionAcomodacao {
@@ -212,8 +211,10 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   height: 515px;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   box-sizing: border-box;
+  flex-direction: row;
 }
 
 /* Coluna Esquerda c/ imagem */
@@ -272,6 +273,12 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   justify-content: center;
 }
 
+.topo-acomodacao{
+  right: 20px; /* Canto inferior direito */
+  bottom: 20px;
+}
+
+
 
 
 /* !!! SECÇÃO LOCAIS !!! */
@@ -280,6 +287,7 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   display: flex;
   height: 541px; 
   width: 100%;
+  position: relative;
 }
 
 /* Coluna Esquerda c/ texto & botão explorar */
@@ -324,16 +332,6 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   justify-content: center;
 }
 
-
-
-
-.top-link {
-  margin-top: 20px;
-  font-size: 24px;
-  text-decoration: none;
-  color: black;
-}
-
 /* Coluna Direita c/ Imagem */
 .DireitaLocais {
   flex: 1;
@@ -341,36 +339,6 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   background-size: cover;
   background-position: center;
   padding: 40px;
-}
-
-/* Icon Voltar ao Topo*/
-.sectionLocais .top-link {
-  right: auto;    /* Cancela o right padrão */
-  left: 20px;     /* Define margem a partir da esquerda */
-  bottom: 20px;   /* Mantém 20px do fundo */
-  background-color: transparent !important;
-  border: 2px solid black !important;
-  color: black !important;
-}
-
-
-/* Dentro de cada secção - VERIFICAR NO FINAL TODAS AS SECÇÕES COM ESTA SETA SE TÊM position: relative */
-.top-link {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
-  color: white;
-  border: 2px solid white;
-  border-radius: 50%;
-  width: 58px;
-  height: 58px;
-  text-align: center;
-  line-height: 36px;
-  text-decoration: none;
-  font-size: 40px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 
@@ -409,6 +377,33 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
 }
 
 
+/* Estilos genéricos para os ícones com botão sobreposto */
+.topo-acomodacao,
+.topo-locais,
+.topo-blog {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+}
+
+/* Posicionamentos específicos */
+.topo-acomodacao {
+  top: 424px;
+  left: 756px;
+}
+
+.topo-locais {
+  top: 445px;
+  left: 22px;
+}
+
+.topo-blog {
+  top: 3056.23px;
+  left: 1375.03px;
+}
+
+
+
 /* !!! RESPONSIVIDADE MOBILE !!! */
 
 
@@ -438,10 +433,7 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
 
 
       .sectionHero {
-        height: auto; /* Deixa a altura adaptar-se ao conteúdo */
         margin-top: 0; /* Ajusta o espaçamento se necessário */
-        padding: 1rem; /* Adiciona algum espaço interno para melhor leitura */
-
         flex-direction: column;              /* Empilha os elementos verticalmente */
         height: auto;                        /* Permite que a altura cresça conforme o conteúdo */
         padding: 40px 20px;                  /* Reduz padding lateral em ecrãs pequenos */
@@ -459,7 +451,7 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
       .EsquerdaHero p {
         font-size: 28px;                     /* Tamanho da fonte mais adequado para mobile */
         line-height: 130%;                  
-        letter-spacing: 10%;                
+        letter-spacing: 0.1em;                
         width: 100%;                         /* Ocupa toda a largura disponível */
         max-width: 100%;
         text-align: center;                 /* Centraliza o texto */
@@ -504,7 +496,8 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
       .EsquerdaAcomodacao {
         width: 100% !important;
         max-width: 100% !important;
-        height: 300px;
+        aspect-ratio: 16 / 9;
+        height: auto;
         background-size: cover;
         background-position: center;
         box-sizing: border-box;
@@ -533,7 +526,6 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
       }
 
 
-
 /* MOBILE - SECÇÃO LOCAIS*/
 
 
@@ -560,25 +552,14 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
         font-size: 18px;
       }
     
-        /* Coluna direita - IMAGEM */
-        .DireitaLocais {
-          width: 100%;
-          height: 200px;        /* define uma altura razoável para mobile */
-          padding: 0;
-          background-size: cover;
-          background-position: center;
-          margin-top: 16px;     /* espaço entre texto e imagem */
+
+      /* Coluna direita - IMAGEM */
+      .DireitaLocais {
+        width: 100%;
+        height: 200px;        /* define uma altura razoável para mobile */
+        padding: 0;
+        background-size: cover;
+        background-position: center;
+        margin-top: 16px;     /* espaço entre texto e imagem */
         }
-
-      /* Botão voltar ao topo */
-      .sectionLocais .top-link {
-        bottom: 16px;         /* mais próximo do fundo */
-        left: 16px;           /* mantém no canto inferior esquerdo */
-        width: 48px;
-        height: 48px;
-        font-size: 32px;
-        line-height: 32px;
-        margin-top: 0; 
-      }
-
     }
