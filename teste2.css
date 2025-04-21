@@ -139,7 +139,7 @@ body, html {
     text-align: center;
   }
 
-  .list, .list-title, .card-text {
+  .list, .list-title, .card-text, .infotext {
     font-family: Jura;
     font-weight: 700;
     font-size: 20px;
@@ -147,7 +147,60 @@ body, html {
     letter-spacing: 0%;
   }
 
+  .infotext {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: block; 
+  }
 
+
+
+
+  #rodape {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Jura', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 118%;
+    letter-spacing: 0%;
+  }
+  
+  .titulo-rodape {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Jura', sans-serif;
+  }
+  
+  .redes-sociais {
+    margin-bottom: 15px;
+  }
+  
+  .redes-sociais a {
+    color: white;
+    margin: 0 10px;
+    font-size: 22px;
+    transition: color 0.3s ease;
+  }
+  
+  .redes-sociais a:hover {
+    color: #ccc;
+  }
+  
+  .creditos-rodape {
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    line-height: 118%;
+    letter-spacing: 0%;
+  
+  }
+  
+  
 
 
   /* !!! RESPONSIVIDADE MOBILE */
