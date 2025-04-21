@@ -5,7 +5,6 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
     margin: 0;
     padding: 0;
     max-width: 100%;
-    overflow-x: hidden;
     box-sizing: border-box;
   }
 
@@ -273,12 +272,6 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   justify-content: center;
 }
 
-.topo-acomodacao{
-  right: 20px; /* Canto inferior direito */
-  bottom: 20px;
-}
-
-
 
 
 /* !!! SECÇÃO LOCAIS !!! */
@@ -346,15 +339,16 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
 /* SECÇÃO BLOG */
 
 .sectionBlog {
+  position: relative; /* Necessário para posicionamento absoluto de filhos */
   width: 100%;
-  height: 690.5130615234375px;
-  top: 2441.49px;
-  background-image: url('images/pexels-thepaintedsquare-583848.png'); /* coloca aqui o caminho da tua imagem */
+  height: 690.51px;
+  background-image: url('images/pexels-thepaintedsquare-583848.png');
   background-size: cover;
   background-position: center;
-  align-items: center;
-  justify-content: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
 }
 
 .btn-blog {
@@ -377,7 +371,9 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
 }
 
 
-/* Estilos genéricos para os ícones com botão sobreposto */
+/*BOTÃO VOLTAR AO TOPO + ICON */
+
+/* Icon Voltar ao Topo com botão sobreposto em transparente */
 .topo-acomodacao,
 .topo-locais,
 .topo-blog {
@@ -386,7 +382,7 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   height: 58px;
 }
 
-/* Posicionamentos específicos */
+/* Posicionamentos específicos de cada botão*/
 .topo-acomodacao {
   top: 424px;
   left: 756px;
@@ -398,10 +394,91 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
 }
 
 .topo-blog {
-  top: 3056.23px;
-  left: 1375.03px;
+  top: 550px;  /* parte inferior da secção */
+  left: 1320px; /* canto direito */
+  position: absolute;
+  z-index: 10;
 }
 
+
+.topo-acomodacao button.btn-voltar-topo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2; /* sobrepõe o ícone */
+}
+
+.topo-locais button.btn-voltar-topo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2; /* sobrepõe o ícone */
+}
+
+.topo-blog button.btn-voltar-topo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2; /* sobrepõe o ícone */
+}
+
+
+
+/* !!! FOOTER !!! */
+
+.rodape {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 118%;
+  letter-spacing: 0%;
+}
+
+.titulo-rodape {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: ;
+}
+
+.redes-sociais {
+  margin-bottom: 15px;
+}
+
+.redes-sociais a {
+  color: white;
+  margin: 0 10px;
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+  color: #ccc;
+}
+
+.creditos-rodape {
+  font-size: 12px;
+  color: #bbb;
+}
 
 
 /* !!! RESPONSIVIDADE MOBILE !!! */
