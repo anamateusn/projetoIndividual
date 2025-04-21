@@ -4,7 +4,6 @@ body, html {
   
 
 
-
   /* !!! NAVBAR !!! */
 
   .navbar-nav .nav-link {
@@ -129,7 +128,6 @@ body, html {
     margin-top: 20px;
 }
 
-
   .card-title {
     font-family: Jura;
     font-weight: 700;
@@ -155,6 +153,7 @@ body, html {
   }
 
 
+  /* !!! SECCÇÃO RODAPÉ !!! */
 
 
   #rodape {
