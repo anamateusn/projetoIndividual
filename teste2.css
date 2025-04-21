@@ -1,0 +1,46 @@
+body, html {
+    height: 100%;
+    font-family: 'Georgia', serif;
+  }
+
+  .hero {
+    background-image: url('images/pexels-lureofadventure-28365967.png'); /* Substitua pela sua imagem */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .navbar {
+    z-index: 3;
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+  }
+
+  .nav-link {
+    font-weight: bold;
+    color: black !important;
+  }
