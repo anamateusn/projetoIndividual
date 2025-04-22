@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locais</title>
+    <title>Contactos</title>
 
     
   <!-- Bootstrap 5 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- Link CSS -->
-   <link rel="stylesheet" href="locais.css">
+   <link rel="stylesheet" href="contactos2.css">
 
    <!--Link Tipo de letra: Josefin Slab-->
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
 
 </head>
 <body>
-    
+  
       <!-- Navbar Bootstrap -->
   <nav class="navbar navbar-expand-lg bg-transparent position-absolute w-100 px-3 px-md-5">
     <div class="container-fluid">
@@ -41,36 +41,42 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link espacamento-acomodacao" href="acomodacao.html">ACOMODAÇÃO</a></li>
-          <li class="nav-item"><a class="nav-link espacamento-locais" href="#sectionLocais">LOCAIS</a></li>
+          <li class="nav-item"><a class="nav-link espacamento-locais" href="locais.html">LOCAIS</a></li>
           <li class="nav-item"><a class="nav-link espacamento-blog" href="#sectionBlog">BLOG</a></li>
-          <li class="nav-item"><a class="nav-link espacamento-contatos" href="contactos.html">CONTATOS</a></li>
+          <li class="nav-item"><a class="nav-link espacamento-contatos" href="#sectionContatos">CONTATOS</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
 
-  <!--IMAGEM DE FUNDO COM OVERLAY TRANSPARENTE ESCURO-->
-  <section class="hero-section">
-    <div class="overlay"></div>
-    
-<!--Caixa select País e cidade -->
-<div class="caixa-select">
-  <p id="pergunta-caixa">Escolha o país:</p>
-  <select class="form-select" aria-label="Default select example">
-    <option selected>País</option>
-    <option value="1">Portugal</option>
-  </select>
-  &nbsp;
-  <p id="pergunta-caixa">Escolha a cidade:</p>
-  <select class="form-select" aria-label="Default select example">
-    <option selected>Cidade</option>
-    <option value="1">Porto</option>
-  </select>
-    <a href="locais_porto.html" class="btn-alugar">Ver</a>
-    </section>
 
-    
+<!-- SECCÇÃO HERO: Imagem de fundo + overlay escuro-->
+
+<section class="imagem-fundo">
+  <div class="overlay"></div>
+
+  <!--Caixa select País e cidade -->
+  <div class="caixa-formulario">
+    <p id="pergunta-caixa">Nome:</p>
+    <div class="caixa-nome"></div>
+    <p id="pergunta-caixa">Email:</p>
+    <div class="caixa-email"></div>
+    <p id="pergunta-caixa">Mensagem:</p>
+    <div class="caixa-mensagem"></div>
+    <a href="inexistente.html" class="btn-alugar">Enviar</a>
+  </div>
+
+  <!--Caixa texto frase inspiradora-->
+  <div class="caixa-inspiracional">
+    <h2 class="texto-inspiracional">“Viajar é descobrir que todos estão errados sobre outros países.”</h2>
+    <p> - Aldous Huxley</p>
+  </div>
+
+</section>
+
+
+
     <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

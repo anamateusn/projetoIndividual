@@ -8,7 +8,7 @@
     font-size: 25px;                    /* tamanho da fonte: 25px */
     line-height: 100%;                  /* Espaçamento entre linhas */
     letter-spacing: 0%;                 /* Espaço horizontal entre cada letra */
-    color: white !important;           /* cor branca */
+    color: white;           /* cor branca */
   }
   
   .navbar {
@@ -55,9 +55,9 @@
 
   /* !!! SECÇÃO HERO !!! */
   
-  .hero-section {
+  .imagem-fundo {
     position: relative;
-    background-image: url('images/pexels-alex-andrews-271121-1203808-2.png');
+    background-image: url('images/pexels-jeremy-bishop-1260133-20146347-2.png');
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -66,29 +66,29 @@
     top: -6px;
   }
   
-  .hero-section .overlay {
+  .imagem-fundo .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(30, 30, 30, 0.81); /* escurece a imagem */
+    background-color: rgba(0,0,0,0.51); /* escurece a imagem */
     z-index: 2;
   }
 
 
   /* !!! SECÇÃO CAIXA PERGUNTAS !!! */
 
-  .caixa-select {
+  .caixa-formulario {
     position: absolute;
     z-index: 3; 
-    background-color: rgba(217, 217, 217, 1);
+    background-color: black;
     padding: 20px;
-    border-radius: 35px;
-    width: 466px;
-    height: 642px;
-    top: 227px;
-    left: 122px;
+    border-radius: 30px;
+    width: 467px;
+    height: 700px;
+    top: 207px;
+    left: 187px;
 
     font-family: Jura;
     font-weight: 700;
@@ -99,33 +99,30 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-  }
-  
-  .form-select{
-    width: 345px;
-    height: 76px;
-    top: 393px;
-    left: 182px;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 1);
-    font-family: Jura;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 118%;
-    letter-spacing: 0%;
-    margin-left: 40px;
+    align-items: center;
+    color: white;
   }
 
   #pergunta-caixa{
+    margin-top: 15px;
+    margin-bottom: 15px;
     margin-left: 40px;
+    align-self: flex-start;
+    text-align: left;
+    font-family: Jura;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 118%;
+    letter-spacing: 0%;
   }
 
   .btn-alugar { 
-    width: 345px;
+    width: 338px;
     height: 76px;
-    background-color: rgba(104, 105, 49, 1);
-    border-radius: 15px;
+    top: 762px;
+    left: 254px;
+    background-color: black;
+    border-radius: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,5 +133,67 @@
     font-size: 25px;
     line-height: 118%;
     letter-spacing: 0%;
-    color: black;
+    color: white;
+    border: 3px solid white;
+    margin-bottom: 10px;
   }
+
+
+
+  .caixa-nome, .caixa-email {
+    width: 338px;
+    height: 76px;
+    border-radius: 15px;
+    background-color: white;
+    font-family: Jura;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 118%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+
+  .caixa-mensagem {
+    width: 338px;
+    height: 161px;
+    border-radius: 15px;
+    background-color: white;
+    font-family: Jura;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 118%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+
+  /*TEXTO INSPIRACIONAL */
+  .caixa-inspiracional {
+    position: absolute;
+    top: 301px;
+    left: 980px;
+    width: 500px;
+    height: 60px;
+    border-radius: 35px;
+    z-index: 3;
+  
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    font-family: 'Jura', sans-serif;
+  }
+  
+  .caixa-inspiracional .texto-inspiracional {
+    font-size: 25px;
+    font-weight: 700px;
+    margin-bottom: 10px;
+  }
+

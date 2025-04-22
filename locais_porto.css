@@ -8,7 +8,7 @@
     font-size: 25px;                    /* tamanho da fonte: 25px */
     line-height: 100%;                  /* Espaçamento entre linhas */
     letter-spacing: 0%;                 /* Espaço horizontal entre cada letra */
-    color: white !important;           /* cor branca */
+    color: white;           /* cor branca */
   }
   
   .navbar {
@@ -137,4 +137,45 @@
     line-height: 118%;
     letter-spacing: 0%;
     color: black;
+  }
+
+
+  .imagem-mapa {
+    position: absolute;
+    z-index: 3;
+    width: 466px;
+    height: 363px;
+    top: 215px;
+    left: 852px;  
+  }
+  
+  .imagem-mapa img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+
+  .caixa-texto-morada {
+    position: absolute;
+    top: 663px;
+    left: 853px;
+    width: 465px;
+    height: 206px;
+    background-color: rgba(0, 0, 0, 0.51);
+    border-radius: 35px;
+    z-index: 3;
+  
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-family: 'Jura', sans-serif;
+  }
+  
+  .caixa-texto-morada .titulo-morada {
+    font-size: 25px;
+    font-weight: 700px;
+    margin-bottom: 10px;
   }

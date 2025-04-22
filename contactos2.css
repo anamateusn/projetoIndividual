@@ -1,0 +1,213 @@
+/*OVERLAY GERAL */
+.overlay-global {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.43);
+  z-index: 9999; /* muito alto para garantir que cobre tudo */
+  pointer-events: none; /* permite clicar em elementos por baixo */
+  border: 5px solid red; /* só para testar */
+}
+
+
+
+
+/* !!! NAVBAR !!! */
+
+.navbar-nav .nav-link {
+    font-family: "Josefin Slab", serif;  /* fonte do texto usada nos links da navbar */
+    font-weight: 700;                   /* espessura da fonte */
+    font-size: 25px;                    /* tamanho da fonte: 25px */
+    line-height: 100%;                  /* Espaçamento entre linhas */
+    letter-spacing: 0%;                 /* Espaço horizontal entre cada letra */
+    color: white;           /* cor branca */
+  }
+  
+  .navbar {
+    z-index: 3;
+    border: none;
+  }
+
+  .navbar-toggler {
+    z-index: 5;
+  }
+
+  .navbar-toggler i {
+    font-size: 24px;
+    color: #000;
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+  }
+
+
+/* Margens específicas por link */
+
+.espacamento-acomodacao {
+    margin-top: 37px;
+    margin-right: 79px;
+  }
+  
+  .espacamento-locais {
+    margin-top: 37px;
+    margin-right: 64px;
+  }
+  
+  .espacamento-blog {
+    margin-top: 37px;
+    margin-right: 58px;
+  }
+  
+  .espacamento-contatos {
+    margin-top: 37px;
+    margin-right: 0; /* último link não precisa de espaçamento à direita */
+  }
+
+
+  /* !!! SECÇÃO HERO !!! */
+  
+  .imagem-fundo {
+    position: relative;
+    background-image: url('images/pexels-jeremy-bishop-1260133-20146347-2.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    width: 100%;
+    height: 1036px;
+    top: -6px;
+  }
+  
+  .imagem-fundo .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.51); /* escurece a imagem */
+    z-index: 2;
+  }
+
+
+  /* !!! SECÇÃO CAIXA PERGUNTAS !!! */
+
+  .caixa-formulario {
+    position: absolute;
+    z-index: 3; 
+    background-color: black;
+    padding: 20px;
+    border-radius: 30px;
+    width: 467px;
+    height: 700px;
+    top: 207px;
+    left: 187px;
+
+    font-family: Jura;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 118%;
+    letter-spacing: 0%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  #pergunta-caixa{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    align-self: flex-start;
+    text-align: left;
+    font-family: Jura;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 118%;
+    letter-spacing: 0%;
+  }
+
+  .btn-alugar { 
+    width: 338px;
+    height: 76px;
+    top: 762px;
+    left: 254px;
+    background-color: black;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto 0;
+    text-decoration: none;
+    font-family: Jura;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 118%;
+    letter-spacing: 0%;
+    color: white;
+    border: 3px solid white;
+    margin-bottom: 10px;
+  }
+
+
+
+  .caixa-nome, .caixa-email {
+    width: 338px;
+    height: 76px;
+    border-radius: 15px;
+    background-color: white;
+    font-family: Jura;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 118%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+
+  .caixa-mensagem {
+    width: 338px;
+    height: 161px;
+    border-radius: 15px;
+    background-color: white;
+    font-family: Jura;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 118%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+
+  /*TEXTO INSPIRACIONAL */
+  .caixa-inspiracional {
+    position: absolute;
+    top: 301px;
+    left: 980px;
+    width: 500px;
+    height: 60px;
+    border-radius: 35px;
+    z-index: 3;
+  
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    font-family: 'Jura', sans-serif;
+  }
+  
+  .caixa-inspiracional .texto-inspiracional {
+    font-size: 25px;
+    font-weight: 700px;
+    margin-bottom: 10px;
+  }
+
