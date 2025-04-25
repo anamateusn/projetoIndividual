@@ -1,61 +1,44 @@
+/* !!! GERAL !!! */
+
 body, html {
     height: 100%;
   }
   
 
+/* !!! NAVBAR !!! */
 
-  /* !!! NAVBAR !!! */
+.navbar {
+  z-index: 3;
+  border: none;
+}
 
-  .navbar-nav .nav-link {
-    font-family: "Josefin Slab", serif;  /* fonte do texto usada nos links da navbar */
-    font-weight: 700;                   /* espessura da fonte */
-    font-size: 25px;                    /* tamanho da fonte: 25px */
-    line-height: 100%;                  /* Espaçamento entre linhas */
-    letter-spacing: 0%;                 /* Espaço horizontal entre cada letra */
-    color: #000 !important;           /* cor preta */
+.navbar-nav .nav-link { /* Estilo dos links da navbar */
+  font-family: "Josefin Slab", serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000;
   }
   
-  .navbar {
-    z-index: 3;
-    border: none;
+.navbar-toggler {
+  z-index: 5;
   }
 
-  .navbar-toggler {
-    z-index: 5;
+.navbar-toggler i {
+  font-size: 24px;
+  color: #000;
   }
 
-  .navbar-toggler i {
-    font-size: 24px;
-    color: #000;
+.navbar-brand {
+  font-weight: bold;
   }
-
-  .navbar-brand {
-    font-weight: bold;
-  }
-
-
 
 /* Margens específicas por link */
-
-.espacamento-acomodacao {
-    margin-top: 37px;
-    margin-right: 79px;
-  }
-  
-  .espacamento-locais {
-    margin-top: 37px;
-    margin-right: 64px;
-  }
-  
-  .espacamento-blog {
-    margin-top: 37px;
-    margin-right: 58px;
-  }
-  
-  .espacamento-contatos {
-    margin-top: 37px;
-    margin-right: 0; /* último link não precisa de espaçamento à direita */
-  }
+.espacamento-acomodacao {margin-top: 37px; margin-right: 79px; }
+.espacamento-locais {margin-top: 37px; margin-right: 64px; }
+.espacamento-blog {margin-top: 37px; margin-right: 58px; }
+.espacamento-contatos {margin-top: 37px; margin-right: 0;}
 
 
 
@@ -64,7 +47,7 @@ body, html {
 
 
   .hero {
-    background-image: url('images/pexels-lureofadventure-28365967.png'); /* Substitua pela sua imagem */
+    background-image: url('images/pexels-lureofadventure-28365967.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -75,7 +58,7 @@ body, html {
   }
 
 
-  .overlay-titulo {
+  .overlay-titulo { /* Sobreposição com fundo escuro e texto centralizado */
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
@@ -93,13 +76,9 @@ body, html {
   }
 
 
-
-
-
   /*!!! SECCÇÃO ALL CARDS !!!*/
 
-
-  .all-cards{
+  .all-cards{/* Estilo geral para a secção que contém os cards */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,7 +88,7 @@ body, html {
     background: rgba(180, 155, 44, 0.25);
   }
 
-  .card {
+  .card {/* Estilo de cada card */
     max-height: 660px;
     border-radius: 35px;
     background-color: rgba(217, 217, 217, 1);
@@ -118,7 +97,7 @@ body, html {
     margin-top: 30px;
   }
   
-.card-img-top {
+.card-img-top {/* Estilo da imagem dentro do card */
     border-radius: 35px;
     max-width: 533.35px;
     width: 100%;
@@ -128,24 +107,22 @@ body, html {
     margin-top: 20px;
 }
 
-  .card-title {
+  .card-title {/* Estilo do título do card */
     font-family: Jura;
     font-weight: 700;
     font-size: 30px;
     line-height: 118%;
-    letter-spacing: 0%;
     text-align: center;
   }
 
-  .list, .list-title, .card-text, .infotext {
+  .list, .list-title, .card-text, .infotext {/* Estilo do texto do card e lista */
     font-family: Jura;
     font-weight: 700;
     font-size: 20px;
     line-height: 118%;
-    letter-spacing: 0%;
   }
 
-  .infotext {
+  .infotext {/* Texto adicional do card com estilo específico */
     text-align: center;
     color: black;
     text-decoration: none;
@@ -154,7 +131,6 @@ body, html {
 
 
   /* !!! SECCÇÃO RODAPÉ !!! */
-
 
   #rodape {
     background-color: black;
@@ -165,7 +141,6 @@ body, html {
     font-weight: 700;
     font-size: 30px;
     line-height: 118%;
-    letter-spacing: 0%;
   }
   
   .titulo-rodape {
@@ -183,44 +158,71 @@ body, html {
     color: white;
     margin: 0 10px;
     font-size: 22px;
-    transition: color 0.3s ease;
   }
-  
-  .redes-sociais a:hover {
-    color: #ccc;
-  }
-  
+
   .creditos-rodape {
     font-size: 15px;
     color: white;
     font-weight: 700;
-    line-height: 118%;
-    letter-spacing: 0%;
-  
+    line-height: 118%;  
   }
   
   
-
-
   /* !!! RESPONSIVIDADE MOBILE */
 
   @media (max-width: 768px) {
-    .titulo-hero {
-      font-size: 40px;
-      padding: 0 20px;
+
+  .titulo-hero {/* Ajustes para o título na secção hero em dispositivos móveis */
+    font-size: 40px;
+    padding: 0 20px;
     }
   
-    .navbar-nav .nav-link {
-        font-size: 18px;
-        margin: 10px 0;
-        text-align: center;
-      }
+  .navbar-nav .nav-link {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+  }
 
-      .card-title, .list-title, .list, .card-text {
-        font-size: 18px;
-      }
+  .navbar-nav {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+      
+  .navbar-toggler i {
+    font-size: 20px;
+  }
+      
+  .espacamento-acomodacao,
+  .espacamento-locais,
+  .espacamento-blog,
+  .espacamento-contatos {
+    margin: 10px 0;
+  }
 
-      .card-img-top {
-        max-width: 90%;
-      }
-    }
+  .card-img-top {/* Ajustes na imagem do card em dispositivos móveis */
+    max-width: 90%;
+    margin: 15px auto;
+  }
+      
+  .card { /* Ajustes gerais nos cards */
+    max-width: 100%;
+    margin: 15px 0;
+    border-radius: 20px;
+  }
+      
+  .card-body { /* Ajustes no corpo do card */
+    padding: 15px;
+  }
+      
+  .card-title { /* Ajustes no título do card em dispositivos móveis */
+    font-size: 24px;
+  }
+      
+  .list, .list-title, .card-text, .infotext {/* Ajustes no texto dentro dos cards */
+    font-size: 16px;
+  }
+      
+ }
+
+

@@ -1,194 +1,92 @@
-
 /* !!! GERAL !!! */
 
-body, html { /*remove o espaçamento padrão - garantia que o layout começa do zero - margin & padding: 0*/
+body, html { /*Garante que o layout começa do zero*/
     margin: 0;
     padding: 0;
     max-width: 100%;
     box-sizing: border-box;
   }
 
-  * {
+  * { /*Todos os elementos terão o mesmo comportamento de box-sizing*/
     box-sizing: border-box;
   }
 
-
-
-
 /* !!! NAVBAR !!! */
   
-  .navbar {
+/* Estilo da navbar, com espaçamento interno e posicionamento */
+
+.navbar {
     padding-top: 20px;              
-    padding-bottom: 20px;           /*espaçamento vertical interno dentro da navbar (acima e abaixo do conteúdo - padding-top & padding-bottom) */
-    position: absolute;             /*Posiciona a navbar de forma absoluta relativamente ao seu elemento pai posicionado */
-    top: 0;                         /*Coloca a navbar encostada ao topo da página */
-    width: 100%;                    /*A navbar ocupa toda a largura do ecrã */
-    z-index: 3;                     /*ordem da sobreposição (stacking) * - a navbar vai aparecer por cima de outros elementos com z-index inferior */
+    padding-bottom: 20px;           
+    position: absolute;             
+    top: 0;                         
+    width: 100%;      
+    z-index: 3;             
 }
 
-  /* links da Navbar */
+/* Estilo dos links da Navbar */
 .navbar-nav .nav-link {
-    font-family: "Jura", sans-serif;    /* fonte do texto usada nos links da navbar */
-    font-weight: 700;                   /* espessura da fonte */
-    line-height: 118%;                  /* Espaçamento entre linhas */
-    letter-spacing: 0%;                 /* Espaço horizontal entre cada letra */
-    color: #000 !important;           /* cor preta */
-    font-size: 25px;                    /* tamanho da fonte: 25px */
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+    line-height: 118%;
+    letter-spacing: 0%;
+    color: #000;
+    font-size: 25px;
 }
 
 /* Margens específicas por link */
 
-.espacamento-acomodacao {
-    margin-right: 79px;
-  }
-  
-  .espacamento-locais {
-    margin-right: 64px;
-  }
-  
-  .espacamento-blog {
-    margin-right: 58px;
-  }
-  
-  .espacamento-contatos {
-    margin-right: 0; /* último link não precisa de espaçamento à direita */
-  }
-
-
+.espacamento-acomodacao {margin-right: 79px;}
+.espacamento-locais {margin-right: 64px;}
+.espacamento-blog {margin-right: 58px;}
+.espacamento-contatos {margin-right: 0;}
 
   
 /* !!! SECÇÃO LIVING AROUND !!! */
 
 
 .sectionLiving {
-    display: flex;                        /* Ativa Flexbox para permitir centralização fácil */
-    justify-content: center;             /* Alinha o conteúdo horizontalmente ao centro */
-    align-items: center;                 /* Alinha o conteúdo verticalmente ao centro */
-    height: 100vh;                       /* A altura da secção ocupa 100% da altura da janela (viewport height) */
+    display: flex;
+    justify-content: center;            
+    align-items: center;                
+    height: 100vh;
     background: url('images/Hero.png') no-repeat center center;
-                                         /* Define a imagem de fundo, sem repetição, e centrada */
-    background-size: cover;              /* Faz com que a imagem cubra toda a secção, adaptando-se ao tamanho */
-    position: relative;                  /* Define a posição como "relativa" para permitir usar o ::before corretamente */
+    background-size: cover;
+    position: relative;
   }
   
-  .titulo_living {
-    position: relative;                  /* Define posição relativa para garantir que z-index funciona corretamente */
-    z-index: 2;                          /* Este elemento fica acima do pseudo-elemento escurecido (::before) */
-    text-align: center;                  /* Centraliza o texto dentro desta `div` */
+.titulo_living {
+    position: relative;
+    z-index: 2;
+    text-align: center;
   }
   
-  .titulo_living h1 {
-    font-family: "Josefin Slab", serif; /* Tipo de letra do título living */
-    color: white;                        /* Cor do texto: branco, para contraste com o fundo escuro */
-    font-size: 85px;                     /* Tamanho da fonte grande para destaque */
-    font-weight: 700;                   /* Grau de negrito */
-    line-height: 100%;                  /* Espaçamento entre linhas */
-    letter-spacing: 0%;                /* Espaço horizontal entre cada letra */
+.titulo_living h1 {
+    font-family: "Josefin Slab", serif;
+    color: white;
+    font-size: 85px;
+    font-weight: 700;
+    line-height: 100%;
   }
 
 
+/* !!! SECÇÃO HERO !!! */
 
-  /* !!! SECÇÃO HERO !!! */
-
-
-  .sectionHero {
+.sectionHero {
     width: 100%;
     height: 569px;
     position: relative;
     background-color: rgba(180, 155, 44, 0.25); 
-
-    display: flex;                  /* Alinha os elementos lado a lado (coluna esquerda e direita) */
-    justify-content: space-between;/* Cria espaço igual entre as colunas esquerda e direita */
-    align-items: center;            /* Alinha o topo das colunas */
-    padding: 60px 87px;            /* Espaço interior: topo/baixo 60px, laterais 87px */
-    flex-wrap: wrap;               /* Permite que as colunas passem para baixo em ecrãs pequenos */
-    gap: 40px;                     /* Espaço entre colunas em layouts menores */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 87px;
+    flex-wrap: wrap;
+    gap: 40px;
     box-sizing: border-box;
 }
   
-
-/* Coluna Esquerda - Texto de destaque */
-.EsquerdaHero {
-  width: 575px;                  /* Largura exata conforme design */
-  height: 152px;                 /* Altura exata conforme design */
-}
-
-.EsquerdaHero p {
-  font-family: 'Jura', sans-serif; /* Fonte elegante */
-  font-weight: 400;             /* Espessura normal da fonte */
-  font-size: 43px;              /* Tamanho grande do texto */
-  line-height: 118%;            /* Espaçamento entre linhas */
-  letter-spacing: 0.2em;        /* Espaço entre letras (20%) */
-  color: #000;                  /* Cor preta */
-  margin: 0;                    /* Remove margem padrão */
-}
-
-/* Coluna Direita */
-.DireitaHero {
-  width: 575px;                 /* Mesma largura que a coluna esquerda, ajustável */
-}
-
-/* Título Trabalhos Remotos */
-.section-title {
-  font-family: 'Jura', sans-serif;
-  font-weight: 700;             /* Negrito */
-  font-size: 30px;
-  line-height: 118%;
-  color: #000;
-  margin-bottom: 20px;          /* Espaço abaixo do título */ 
-  text-align: center;
-}
-
-/* Área das listas com cantos decorativos */
-.decorated-lists {
-  position: relative;           /* Para posicionar os cantos absolutos dentro deste bloco */
-  padding: 40px;
-}
-
-/* Cantos decorativos */
-.corner {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  border: 10px solid #000;
-}
-
-/* Cantos específicos */
-.top-left {
-  top: 0;
-  left: 0;
-  border-right: none;
-  border-bottom: none;
-}
-
-.bottom-right {
-  bottom: 0;
-  right: 0;
-  border-left: none;
-  border-top: none;
-}
-
-/* Container das duas listas lado a lado */
-.lists-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-/* Estilo das listas */
-.lists-container ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-family: 'Jura', sans-serif;
-  font-size: 18px;
-  color: #000;
-  width: 132px;                 /* Conforme o layout */
-  height: auto;                 /* Altura automática */
-  font-weight: 700;
-}
-
-/* linha vertical que divide a secção Hero ao meio */
+/* Linha vertical que divide as duas colunas */
 .vertical-divider {
   position: absolute;
   top: 20%;
@@ -200,7 +98,76 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   z-index: 1;
 }
 
+/* Coluna Esquerda & Direita */
 
+.EsquerdaHero, .DireitaHero {
+  width: 575px;
+  height: 152px;
+}
+
+.EsquerdaHero p {
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+  font-size: 43px;
+  line-height: 118%;
+  letter-spacing: 0.2em;
+  color: #000;
+  margin: 0;
+}
+
+.section-title { /*Título Trabalhos Remotos*/
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 118%;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.decorated-lists {/* Área das listas com cantos decorativos */
+  position: relative;
+  padding: 40px;
+}
+
+.corner {/* Cantos decorativos */ 
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border: 10px solid #000;
+}
+
+.top-left {/* Cantos superior esquerdo */
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.bottom-right {/* Canto inferior direito */
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.lists-container {/* Container das duas listas lado a lado */
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.lists-container ul {/* Estilo das listas */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Jura', sans-serif;
+  font-size: 18px;
+  color: #000;
+  width: 132px;
+  height: auto;
+  font-weight: 700;
+}
 
 
 /* !!! SECÇÃO ACOMODAÇÃO !!! */
@@ -217,7 +184,6 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
 }
 
 /* Coluna Esquerda c/ imagem */
-
 .EsquerdaAcomodacao {
   width: 607px;
   height: 515px;
@@ -227,9 +193,8 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
 }
 
 /* Coluna direita c/ texto & botão descobrir*/
-
 .DireitaAcomodacao {
-  flex: 1; /* ocupa o restante espaço da secção */
+  flex: 1;
   height: 515px;
   background-color: black;
   color: white;
@@ -238,7 +203,7 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 186px 60px 60px 60px; /* top, right, bottom, left */
+  padding: 186px 60px 60px 60px;
   position: relative;
 }
 
@@ -265,7 +230,7 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   color: white;
   background-color: transparent;
   text-decoration: none;
-  font-family: 'Jura', sans-serif; /* ou outra da tua preferência */
+  font-family: 'Jura', sans-serif;
   font-size: 25px;
   letter-spacing: 1px;
   align-items: center;
@@ -328,7 +293,7 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
 /* Coluna Direita c/ Imagem */
 .DireitaLocais {
   flex: 1;
-  background-image: url('images/pexels-thatguycraig000-1546898-2.png'); /* coloca aqui o caminho da tua imagem */
+  background-image: url('images/pexels-thatguycraig000-1546898-2.png');
   background-size: cover;
   background-position: center;
   padding: 40px;
@@ -336,10 +301,10 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
 
 
 
-/* SECÇÃO BLOG */
+/* !!! SECÇÃO BLOG !!! */
 
 .sectionBlog {
-  position: relative; /* Necessário para posicionamento absoluto de filhos */
+  position: relative;
   width: 100%;
   height: 690.51px;
   background-image: url('images/pexels-thepaintedsquare-583848.png');
@@ -351,7 +316,7 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   justify-content: center;  
 }
 
-.btn-blog {
+.btn-blog { /*botão Blog*/
   display: flex;
   width: 309px;
   height: 77px;
@@ -371,60 +336,30 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
 }
 
 
-/*BOTÃO VOLTAR AO TOPO + ICON */
+/* !!! BOTÃO VOLTAR AO TOPO + ICON BOOTSTRAP !!! */
 
-/* Icon Voltar ao Topo com botão sobreposto em transparente */
 .topo-acomodacao,
 .topo-locais,
-.topo-blog {
+.topo-blog {/* Icon Voltar ao Topo com botão sobreposto em transparente */
   position: absolute;
   width: 58px;
   height: 58px;
 }
 
 /* Posicionamentos específicos de cada botão*/
-.topo-acomodacao {
-  top: 424px;
-  left: 756px;
-}
+.topo-acomodacao {top: 424px;left: 756px;}
 
-.topo-locais {
-  top: 445px;
-  left: 22px;
-}
+.topo-locais {top: 445px;left: 22px;}
 
 .topo-blog {
-  top: 550px;  /* parte inferior da secção */
-  left: 1320px; /* canto direito */
+  top: 550px;
+  left: 1320px;
   position: absolute;
   z-index: 10;
 }
 
-
-.topo-acomodacao button.btn-voltar-topo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 2; /* sobrepõe o ícone */
-}
-
-.topo-locais button.btn-voltar-topo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 2; /* sobrepõe o ícone */
-}
-
+.topo-acomodacao button.btn-voltar-topo, 
+.topo-locais button.btn-voltar-topo, 
 .topo-blog button.btn-voltar-topo {
   position: absolute;
   top: 0;
@@ -434,9 +369,8 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 2; /* sobrepõe o ícone */
+  z-index: 2; /* para sobrepôr o ícone */
 }
-
 
 
 /* !!! FOOTER !!! */
@@ -450,14 +384,12 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   font-weight: 700;
   font-size: 30px;
   line-height: 118%;
-  letter-spacing: 0%;
 }
 
 .titulo-rodape {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
-  font-family: 'Jura', sans-serif;
 }
 
 .redes-sociais {
@@ -468,11 +400,6 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   color: white;
   margin: 0 10px;
   font-size: 22px;
-  transition: color 0.3s ease;
-}
-
-.redes-sociais a:hover {
-  color: #ccc;
 }
 
 .creditos-rodape {
@@ -480,166 +407,171 @@ body, html { /*remove o espaçamento padrão - garantia que o layout começa do 
   color: white;
   font-weight: 700;
   line-height: 118%;
-  letter-spacing: 0%;
 }
+
 
 
 /* !!! RESPONSIVIDADE MOBILE !!! */
 
 
-
-/*MOBILE - SECÇÃO LIVING + NAVBAR*/
-
-
-
 @media (max-width: 768px) {
-    .titulo-centralizado h1 {
-      font-size: 2.5rem;             /* MOBILE Reduz o tamanho da fonte em ecrãs com largura até 768px */
-    }
 
-    .navbar-nav .nav-link {
-        font-size: 16px;            /* MOBILE Tamanho da fonte dos Links*/
-      }
-    
-      .espacamento-acomodacao,
-      .espacamento-locais,
-      .espacamento-blog,
-      .espacamento-contatos {       /* MOBILE Adapta o espaçamento dos links na Navbar */
-        margin-right: 10px;
-      }
-
-
-/*MOBILE - SECÇÃO HERO*/
-
-
-      .sectionHero {
-        margin-top: 0; /* Ajusta o espaçamento se necessário */
-        flex-direction: column;              /* Empilha os elementos verticalmente */
-        height: auto;                        /* Permite que a altura cresça conforme o conteúdo */
-        padding: 40px 20px;                  /* Reduz padding lateral em ecrãs pequenos */
-        gap: 30px;                           /* Espaço entre colunas empilhadas */
-        align-items: center;
-      }
-
-      .EsquerdaHero, 
-      .DireitaHero {
-        width: 100%;           /* Largura 100% para ocupar toda a largura disponível */
-        max-width: 100%;       /* Impede que ultrapasse a largura */
-        box-sizing: border-box;/* Garante que padding não aumente a largura */
+  /*GERAL*/
+  .body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /*SECÇÃO LIVING AROUND - título*/
+  .titulo-centralizado h1 {
+    font-size: 2.5rem;
   }
 
-      .EsquerdaHero p {
-        font-size: 28px;                     /* Tamanho da fonte mais adequado para mobile */
-        line-height: 130%;                  
-        letter-spacing: 0.1em;                
-        width: 100%;                         /* Ocupa toda a largura disponível */
-        max-width: 100%;
-        text-align: center;                 /* Centraliza o texto */
-        word-wrap: break-word;
-      }
-    
-      .DireitaHero {
-        text-align: center;                 /* Centraliza título e listas */
-      }
-    
-      .section-title {
-        font-size: 24px;
-      }
-    
-      .lists-container {
-        flex-direction: column;             /* Listas ficam uma por cima da outra */
-        align-items: center;                /* Centraliza listas */
-        gap: 20px;
-      }
-    
-      .lists-container ul {
-        margin: 0 auto;                     /* Centraliza as listas */
-      }
-    
-      .corner {
-        display: none;                      /* Oculta cantos decorativos no mobile (opcional) */
-      }
+  /*NAVBAR*/
+  .navbar-collapse {
+    background-color: white; 
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 999;
+    display: block;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #fff;
+  }
+
+  .navbar-nav {
+    background-color: transparent; 
+    padding: 10px;
+    border-radius: 0px;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-toggler i {
+    font-size: 24px;  
+    color: #fff; 
+  }
 
 
-/* MOBILE - SECCÇÃO ACOMODAÇÃO */
-
-    
-      .sectionAcomodacao {
-        flex-direction: column;
-        height: auto;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-    
-        /* Coluna esq - IMAGEM - A imagem fica apenas responsiva em alguns tamanhos mobile mas não todos*/
-      .EsquerdaAcomodacao {
-        width: 100% !important;
-        max-width: 100% !important;
-        aspect-ratio: 16 / 9;
-        height: auto;
-        background-size: cover;
-        background-position: center;
-        box-sizing: border-box;
-      }
-    
-        /*Coluna drt - TEXTO + BOTÃO */
-      .DireitaAcomodacao {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        padding: 40px 20px;
-        box-sizing: border-box;
-        justify-content: center;
-      }
-    
-      .texto-descobrir {
-        width: 100%;
-        font-size: 24px;
-        text-align: center;
-      }
-    
-      .btn-descobrir {
-        margin-top: 20px;
-        font-size: 16px;
-        padding: 10px 20px;
-      }
-
-
-/* MOBILE - SECÇÃO LOCAIS*/
-
-
-      .sectionLocais {
-        flex-direction: column;
-        height: auto;         /* altura se ajusta ao conteúdo */
-        margin: 0;
-        padding: 0;
-      }
-    
-      /* Coluna esquerda - TEXTO + BOTÃO */
-      .EsquerdaLocais {
-        width: 100%;
-        padding: 20px 16px;   /* reduz o padding lateral */
-      }
-    
-      .texto-destinos {
-        font-size: 24px;      /* texto um pouco menor para mobile */
-        margin-bottom: 16px;  /* espaçamento embaixo do título */
-      }
-    
-      .btn-explorar {
-        padding: 8px 20px;
-        font-size: 18px;
-      }
-    
-
-      /* Coluna direita - IMAGEM */
-      .DireitaLocais {
-        width: 100%;
-        height: 200px;        /* define uma altura razoável para mobile */
-        padding: 0;
-        background-size: cover;
-        background-position: center;
-        margin-top: 16px;     /* espaço entre texto e imagem */
-        }
+/* SECÇÃO HERO */
+  .sectionHero {
+    margin-top: 0;
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    gap: 30px;
+    align-items: center;
     }
+
+  .EsquerdaHero, 
+  .DireitaHero {
+    width: 100%; 
+    max-width: 100%;
+    }
+
+  .EsquerdaHero p {
+    font-size: 28px;
+    line-height: 130%;
+    letter-spacing: 0.1em;
+    width: 100%;
+    text-align: center;
+    }
+
+  .DireitaHero {
+    display: none; /* Oculta a parte direita da secção Hero */
+    }
+
+
+/* SECÇÃO ACOMODAÇÃO */
+  .sectionAcomodacao {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    }
+
+  .EsquerdaAcomodacao {
+    display: none; /* Oculta a imagem Van do lado esquerdo da secção Acomodação*/
+    }
+
+  .DireitaAcomodacao {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 40px 20px;
+    justify-content: center;
+    }
+
+  .texto-descobrir {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    }
+
+  .btn-descobrir {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
+    }
+
+
+/* SECÇÃO LOCAIS */
+  .sectionLocais {
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    }
+
+  .EsquerdaLocais {
+    width: 100%;
+    padding: 20px 16px;
+    }
+
+  .texto-destinos {
+    font-size: 24px;
+    margin-bottom: 16px;  /* Espaço abaixo do título */
+    }
+
+  .btn-explorar {
+    padding: 8px 20px;
+    font-size: 18px;
+    }
+
+  .DireitaLocais {
+    display: none; /* Oculta a imagem do lado direito da secção Locais */
+    }
+
+
+/*SECÇÃO BLOG */
+  #sectionBlog {
+     margin-top: 0px;
+    padding: 0px;
+    }
+
+
+/* AJUSTES GERAIS */
+  .btn-voltar-topo {
+    padding: 8px;
+    }
+
+  .btn-blog, .btn-descobrir, .btn-explorar {
+    padding: 12px 24px;
+    font-size: 16px;
+    }
+
+  .topo-acomodacao, .topo-locais, .topo-blog {
+    display: none; /* Oculta a função voltar ao topo em mobile */
+    }
+
+  .bi-arrow-up-circle {
+    display: none; /*Oculta os icons das setas de voltar ao topo em mobile*/
+    }
+
+  }
