@@ -429,33 +429,20 @@ body, html { /*Garante que o layout começa do zero*/
   }
 
   /*NAVBAR*/
-  .navbar-collapse {
-    background-color: white; 
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 999;
-    display: block;
-  }
-
   .navbar-nav .nav-link {
     font-size: 18px;
     margin: 10px 0;
-    color: #fff;
+    text-align: center;
   }
 
   .navbar-nav {
-    background-color: transparent; 
+    background-color: white;
     padding: 10px;
-    border-radius: 0px;
+    border-radius: 10px;
   }
-
-  .navbar-toggler {
-    display: block;
-  }
-
+      
   .navbar-toggler i {
-    font-size: 24px;  
-    color: #fff; 
+    font-size: 20px;
   }
 
 
